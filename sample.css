@@ -30,6 +30,7 @@ b{
 }
 .navbar{
   background: #000;
+  color: #fff! important;
 }
 .navbar-toggler{
   border: none! important;

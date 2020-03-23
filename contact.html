@@ -1,0 +1,647 @@
+<!--
+Author: w3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>CSE Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Provision Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //online-fonts -->
+    <style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --white: black;
+  --red: #e31b23;
+  --bodyColor: #fff;
+  --borderFormEls: black;
+  --bgFormEls: #fff;
+  --bgFormElsFocus: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+}
+
+/* Remove native arrow on IE */
+select::-ms-expand {
+  display: none;
+}
+
+/*Remove dotted outline from selected option on Firefox*/
+/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
+/*We use !important to override the color set for the select on line 99*/
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* FORM ELEMENTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form h1 {
+  margin-bottom: 1.5rem;
+}
+
+.my-form li,
+.my-form .grid > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+  height: 170px;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+  /*Fix opacity issue on Firefox*/
+  opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus + label {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+
+.my-form *:required {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);
+}
+
+.my-form select {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+}
+
+.my-form *:disabled {
+  cursor: default;
+  filter: blur(2px);
+}
+
+
+/* FORM BTNS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form .required-msg {
+  display: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
+    no-repeat center left / 15px 15px;
+  padding-left: 20px;
+}
+
+.my-form .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.my-form button {
+  font-weight: bold;
+}
+
+.my-form button > * {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+  transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+  transform: translateX(110%);
+}
+
+
+/* CUSTOM CHECKBOX
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.my-form input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form input[type="checkbox"] + label::before,
+.my-form input[type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+}
+
+.my-form input[type="checkbox"] + label::before {
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--white);
+}
+
+.my-form input[type="checkbox"]:checked + label::before {
+  background: var(--red);
+}
+
+.my-form input[type="checkbox"]:checked + label::after {
+  left: 7px;
+  top: 7px;
+  width: 6px;
+  height: 14px;
+  border-bottom: 2px solid var(--white);
+  border-right: 2px solid var(--white);
+  transform: rotate(45deg);
+}
+.button0{
+  font-family: Century Gothic;
+  color: #fff;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.btn0{
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s ease;
+  border-radius: 3px;
+}
+.btn0:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 600px) {
+  .my-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .my-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-form .grid-3 {
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+
+  .my-form .grid > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .my-form .required-msg {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 541px) {
+  .my-form input[type="checkbox"] + label::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .my-form input[type="checkbox"]:checked + label::after {
+    top: 3px;
+  }
+}
+
+
+</style>
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%,-75%);width: 350px; padding: 20px;}
+        #sd ul{
+          float: right;
+          list-style-type: none;
+          margin-top: 25px;
+          margin-right:  25px;
+        }
+        #sd .logo{
+          margin-left: 15PX;
+          margin-top: 15PX;
+        }
+        #sd ul li{
+          display: inline-block;
+        }
+        #sd ul li a{
+          text-decoration: none;
+          color: #fff;
+          padding: 5px 20px;
+          border: 1px solid transparent;
+          transition: 0.6s ease;
+          border-radius: 3px;
+        }
+        #sd ul li a:hover{
+          background-color: #fff;
+          color: #000;
+
+          text-decoration: none;
+        }
+        #sd ul li.active a{
+          background-color: #fff;
+          color: #000;
+        }
+      #sd li{
+        border-radius: 20%;
+        padding: 0;
+
+
+      }
+      #sd nav a{
+        margin: 0em 0.7em;
+        font-size: 0.9em;
+        font-weight: normal;
+        color: #fff;
+        padding: 0px 7px;
+        padding-top: 9%;
+        padding-bottom: 9%;
+        letter-spacing: 2px;
+        border-bottom-left-radius: 26%;
+        border-radius: 22%;
+        display: inline-block;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+      }
+      h3.h{
+        align-self: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 2rem;
+      }
+      h3.h1{
+        align-self: center;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 2rem;
+      }
+      @media (max-width: 1366px)
+      .main-content {
+          min-height: 19em;
+      }
+    .banner-content-w3pvt {
+        padding-top: 8em;
+    }
+    h3.h3{
+      align-self:center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: black;
+      margin-top: 2rem;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main-content inner" id="home">
+        <!-- header -->
+        <header>
+
+            <div class="container-fluid">
+                <!-- nav -->
+               <nav class="py-md-4 py-3 d-lg-flex nav_w3pvt" id="sd">
+
+                    <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-lg-3 ml-auto">
+                        <li><a href="index.html">HOME</a></li>
+
+
+                        <li><a href="events.html"> EVENTS </a></li>
+                              <li class="#"><a href="activities.html">ACTIVITIES</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="mobile.html">MOBILE MODE</a></li>
+
+                        <li class="active"><a href="contact.html">CONTACT US</a></li>
+                        <li class="#"><a href="More.html">PORTAL</a></li>
+                        <li>
+                            <p class="w3pvt-phone">
+                                <span class="fa fa-phone mr-2"></span>+0431-3058947
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+    </div>
+    <!-- //main -->
+<div>
+  <br><br><br>
+    <!-- banner-bottom -->
+    <form action="" class="my-form">
+
+  <div class="container">
+    <br><br><br><br><br><br><br><br><br>
+    <section class="last-content text py-5">
+      <div class="container py-md-3 text-center">
+          <div class="last-w3pvt-inner-content px-lg-5">
+              <h3 class="h1"> <span>CONTACT US !!</span> </h3>
+
+
+          </div>
+      </div>
+    </section>
+    <br><br>
+    <ul>
+
+      <li>
+        <div class="grid grid-2">
+          <input name="name" type="text" placeholder="Name" required>
+          <input name="surname" placeholder="Surname" required>
+        </div>
+      </li>
+      <li>
+        <div class="grid grid-2">
+          <input name="email" type="email" placeholder="Email" required>
+          <input name="phone" type="tel" placeholder="Phone">
+        </div>
+      </li>
+      <li>
+        <textarea name="message" placeholder="Message"></textarea>
+      </li>
+      <li>
+        <input type="checkbox" id="terms">
+        <label for="terms">I DO APPRECIATE <a href="">THE DEPARTMENTS BLOG</a></label>
+      </li>
+      <li>
+        <div class="grid grid-3">
+          <div class="required-msg">REQUIRED FIELDS</div>
+          <button class="btn-grid" type="submit" disabled>
+            <span class="back">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+            </span>
+            <span class="front">SUBMIT</span>
+          </button>
+          <button class="btn-grid" type="reset" disabled>
+            <span class="back">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+            </span>
+            <span class="front">RESET</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</form>
+
+
+<script>
+const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+const btns = document.querySelectorAll(".my-form button");
+
+checkbox.addEventListener("change", function() {
+  const checked = this.checked;
+  for (const btn of btns) {
+    checked ? (btn.disabled = false) : (btn.disabled = true);
+  }
+});
+</script>
+</div>
+
+            <ul class="list-unstyled row text-left mt-lg-5 pt-lg-5  pb-lg-3">
+                <li class="col-lg-4 adress-info">
+                    <div class="row">
+                        <div class="col-md-3 text-lg-center adress-icon">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+                        <div class="col-md-9 text-left">
+                            <h6>Location</h6>
+                            <p>SRM TRP Engineering College
+                                <br>Tiruchirappalli, Tamil Nadu</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-lg-4 adress-info">
+                    <div class="row">
+                        <div class="col-md-3 text-lg-center adress-icon">
+                            <span class="fa fa-envelope-open-o"></span>
+                        </div>
+                        <div class="col-md-9 text-left">
+                            <h6>Email</h6>
+                            <a href="mailto:info@example.com">princetrpec@gmail.com</a>
+                            <br>
+                            <a href="mailto:info@example.com">srmtrpec@gmail.com</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-4 adress-info">
+                    <div class="row">
+                        <div class="col-md-3 text-lg-center adress-icon">
+                            <span class="fa fa-mobile"></span>
+                        </div>
+                        <div class="col-md-9 text-left">
+                            <h6>Phone Number</h6>
+                            <p>+0431-3058947</p>
+                            <p>+ 9876543210</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="map-fo mt-lg-5 mt-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007" allowfullscreen=""></iframe>
+            </div>
+
+    <!-- //banner-bottom -->
+    <!-- footer -->
+    <footer>
+  <!-- Footer main -->
+  <section class="ft-main">
+
+  <div class="ft-main-item">
+
+  <h2 class="ft-title">QUICK LINKS</h2>
+  <ul>
+  <li><a href="#">>General Rules & Regulations</a></li>
+  <li><a href="#">>Complaints & Welfare Comittee</a></li>
+  <li><a href="#">>Students Info</a></li>
+  <li><a href="#">>Digital Information Board</a></li>
+  </ul>
+  </div>
+  <div class="ft-main-item">
+  <h2 class="ft-title">INSTANT ACCESS</h2>
+  <ul>
+  <li><a href="#">>Web Portal</a></li>
+  <li><a href="#">>Online Mail</a></li>
+  <li><a href="#">>Pdf Docs</a></li>
+  <li><a href="#">>Recent News</a></li>
+  <li><a href="#">>Department Info</a></li>
+  </ul>
+  </div>
+  <div class="ft-main-item">
+  <h2 class="ft-title">CONTACT US</h2>
+
+  <p> SRM TRP Engineering College <br>
+    NH 45, Mannachanallur Taluk, <br>
+  Tiruchirappalli District, Irungalur, <br>
+  Tamil Nadu - 621105 <br>
+  0431-2258940/2258681/2258947<br>
+</p>
+  </div>
+  <div class="ft-main-item">
+  <h2 class="ft-title">RECENT NEWS</h2>
+  <font family="Verdana">  <p>Subscribe for Latest news.</p></font>
+  <form>
+  <input type="email" name="email" placeholder="Enter email address">
+  <input type="submit" value="Subscribe">
+  </form>
+  </div>
+  </section>
+
+  <!-- Footer social -->
+  <section class="ft-social">
+  <ul class="ft-social-list">
+  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+  </ul>
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+  <ul class="ft-legal-list">
+  <li>Designed By The_iNNovaTioN_bEAstS</li>
+  <li>&copy; Copyright 2019 -All Right Reserved-SRM TRP Engineering College</li>
+  </ul>
+  </section>
+  <div class="move-top text-center mt-3">
+  <a href="#home" class="move-top"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+  </div>
+  </footer>
+    <!-- //footer -->
+
+
+
+
+</body>
+
+</html>
